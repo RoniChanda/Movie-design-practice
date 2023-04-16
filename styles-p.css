@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Merienda", cursive;
+}
+
+body {
+  background-color: #04050d;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/images/spd.png");
+  background-position: 110rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoom-in 2s ease-out;
+}
+
+@keyframes zoom-in {
+  0% {
+    background-position: 20rem 0;
+  }
+  100% {
+    background-position: 110rem 0;
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 0.5rem;
+  left: 10rem;
+  font-size: 4rem;
+  z-index: 2;
+  display: inline-block;
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  animation: logo-anime 2s linear, glow 4s linear infinite;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #04050d;
+}
+
+@keyframes logo-anime {
+  0% {
+    top: 14rem;
+    font-size: 10rem;
+  }
+  100% {
+    top: 0.5rem;
+    font-size: 4rem;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 60px #03bcf4, 0 0 80px #03bcf4;
+  }
+  50% {
+    text-shadow: 0 0 10px #03bcf4;
+  }
+}
+
+.navbar {
+  position: fixed;
+  left: 3rem;
+  transform: rotate(-90deg);
+  transform-origin: left;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.navbar-1 {
+  top: 15rem;
+  animation: nav-1 2s linear;
+}
+.navbar-2 {
+  top: 43rem;
+  animation: nav-2 2s linear;
+}
+.navbar-3 {
+  top: 31rem;
+  animation: nav-3 2s linear;
+}
+.navbar-4 {
+  top: 61rem;
+  animation: nav-4 2s linear;
+}
+
+@keyframes nav-1 {
+  0% {
+    top: 35rem;
+    left: 8%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 15rem;
+    left: 3rem;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes nav-2 {
+  0% {
+    top: 41rem;
+    left: 16%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 43rem;
+    left: 3rem;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes nav-3 {
+  0% {
+    top: 35rem;
+    left: 24%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 31rem;
+    left: 3rem;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes nav-4 {
+  0% {
+    top: 41rem;
+    left: 34%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 61rem;
+    left: 3rem;
+    transform: rotate(-90deg);
+  }
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4;
+  font-size: 2.5rem;
+  margin-top: -2rem;
+  text-decoration: none;
+  transition: all 0.5s linear;
+}
+
+.navbar a:hover {
+  text-shadow: 0 0 30px #03bcf4;
+  transform: scale(1.05);
+}
+
+.popular {
+  margin: 7rem;
+  color: #fff;
+  animation: popular-visible 3s linear;
+}
+
+@keyframes popular-visible {
+  0% {
+    transform: translate(100vw);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

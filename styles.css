@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Merienda", cursive;
+}
+
+body {
+  background-color: #04050d;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/images/spd.png");
+  background-position: 20rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoom-out 2s ease-in;
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 14rem;
+  left: 10rem;
+  font-size: 10rem;
+  z-index: 2;
+  display: inline-block;
+  font-family: "Merienda", cursive;
+  font-weight: 800;
+  animation: invisible 2.1s, glow 4s linear infinite;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #04050d;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 60px #03bcf4, 0 0 80px #03bcf4;
+  }
+  50% {
+    text-shadow: 0 0 10px #03bcf4;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.navbar-1 {
+  left: 8%;
+}
+.navbar-2 {
+  left: 16%;
+}
+.navbar-3 {
+  left: 24%;
+}
+.navbar-4 {
+  left: 34%;
+}
+
+.web {
+  width: 1px;
+  visibility: hidden;
+  background-color: #dddcd2;
+  align-self: center;
+  z-index: 3;
+}
+
+.web-1 {
+  height: 35rem;
+  animation: web-down-up 4s linear 3s;
+}
+
+.web-2 {
+  height: 41rem;
+  animation: web-down-up 4s linear 5s;
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4;
+  font-size: 2.5rem;
+  margin-top: -2rem;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  z-index: 3;
+}
+
+.navbar-1 a,
+.navbar-3 a {
+  animation: invisible 3s, web-down 2s linear 3s;
+}
+
+.navbar-2 a,
+.navbar-4 a {
+  animation: invisible 5s, web-down 2s linear 5s;
+}
+
+.navbar a:hover {
+  text-shadow: 0 0 30px #03bcf4;
+  transform: scale(1.05);
+}
+
+@keyframes web-down-up {
+  0%,
+  100% {
+    visibility: visible;
+    transform: translateY(-40rem);
+  }
+  50% {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes web-down {
+  0% {
+    transform: translateY(-40rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes invisible {
+  0%,
+  100% {
+    visibility: hidden;
+  }
+}
